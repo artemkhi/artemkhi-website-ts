@@ -2,6 +2,7 @@ $hoverScale: 1.1;
 $activeScale: .95;
 
 .button {
+    user-select: none;
     color: var(--color-text);
     font-size: var(--font-size-18);
     padding: .5rem .875rem;

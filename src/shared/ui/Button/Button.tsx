@@ -3,20 +3,20 @@ import styles from './Button.module.scss';
 import { getStyles } from "../../lib";
 
 interface basicButtonProps {
-    children: ReactNode | undefined;
-    className: string | undefined;
-    underline: boolean | undefined;
-    loading: boolean | undefined;
-    fullWidth: boolean | undefined;
+    children?: ReactNode;
+    className?: string;
+    underline?: boolean;
+    loading?: boolean;
+    fullWidth?: boolean;
 }
 
 interface defaultButtonProps extends basicButtonProps {
-    variant: 'default';
-    linesOnHover: boolean | string;
+    variant?: 'default';
+    linesOnHover?: boolean | string;
 }
 
 interface otherButtonProps extends basicButtonProps {
-    variant: 'recommended' | 'transparent';
+    variant?: 'recommended' | 'transparent';
     linesOnHover?: never;
 }
 
@@ -44,7 +44,7 @@ export default function Button(props: buttonProps) {
     const additional = [
         variantMap[variant],
         className,
-    ].filter(item => item !== undefined);
+    ]
 
     return <button
         className={getStyles(styles.button, mode, additional)}
