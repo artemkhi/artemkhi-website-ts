@@ -1,0 +1,47 @@
+$hoverScale: 1.1;
+$activeScale: .95;
+
+.button {
+    color: var(--color-text);
+    font-size: var(--font-size-18);
+    padding: .5rem .875rem;
+    transition: var(--duration-fast);
+
+    &:disabled {
+        opacity: .7;
+    }
+
+    &:not(:disabled):hover {
+        scale: $hoverScale;
+    }
+    &:not(:disabled):active {
+        scale: $activeScale;
+    }
+
+    &.variantDefault {
+        background-color: var(--color-background);
+        background-position-y: 10vh;
+        background-repeat: no-repeat;
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius-inside);
+        text-transform: uppercase;
+
+        &:not(:disabled):hover, &:not(:disabled):active {
+            background-position-y: center;
+        }
+    }
+
+    &.variantRecommended {
+        color: var(--color-background);
+        background-color: var(--color-text);
+    }
+
+    &.variantTransparent {
+        &:hover {
+            scale: 1;
+        }
+        &:active {
+            scale: 1;
+        }
+    }
+}

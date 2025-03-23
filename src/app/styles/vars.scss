@@ -1,0 +1,41 @@
+:root {
+    // Font sizes
+    --font-size-14: .875rem;
+    --font-size-16: 1rem;
+    --font-size-18: 1.125rem;
+    --font-size-20: 1.25rem;
+    --font-size-24: 1.5rem;
+    --font-size-32: 2rem;
+    --font-size-48: 3rem;
+    --font-size-64: 4rem;
+
+    // Colors
+    --color-text: black;
+    --color-background: white;
+    --color-border: black;
+    --color1: #CC0000;
+    --color2: #FFE500;
+    --color3: #7B01F9;
+    --color-transparent: transparent;
+
+    // Special Colors
+    --color-bot1: #B4D5F4;
+    --color-bot2: #71AFE9;
+    --color-bot3: #308ADF;
+
+    // Border Radius
+    --border-radius-block: 15px;
+    --border-radius-inside: 5px;
+    --border-radius-circle: 50%;
+
+    // Animation Durations
+    --duration-blink: .078625s;
+    --duration-faster: .15625s;
+    --duration-fast: .3125s;
+    --duration-normal: .625s;
+    --duration-slow: 1.25s;
+
+    // Button Gradients
+    --gradient-rays: linear-gradient(135deg, #FFF 0% 85%, var(--color1) 85% 90%, var(--color2) 90% 95%, var(--color3) 95% 100%);
+    --gradient-bots: linear-gradient(135deg, #FFF 0% 85%, var(--color-bot1) 85% 90%, var(--color-bot2) 90% 95%, var(--color-bot3) 95% 100%);
+}

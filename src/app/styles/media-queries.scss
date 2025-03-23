@@ -1,0 +1,13 @@
+$mobile: 800px;
+
+@mixin mobile() {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin dark() {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
