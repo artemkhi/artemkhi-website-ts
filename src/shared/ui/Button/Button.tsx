@@ -1,8 +1,9 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import styles from './Button.module.scss';
 import { getStyles } from "../../lib";
+import Loader from "../Loader/Loader";
 
-interface basicButtonProps {
+interface basicButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode;
     className?: string;
     underline?: boolean;
@@ -52,6 +53,13 @@ export default function Button(props: buttonProps) {
         style={{ backgroundImage: linesOnHover && typeof linesOnHover === 'string' ? linesOnHover : 'var(--gradient-rays)' }}
         {...otherProps}
     >
-        {children}
+        <div className={getStyles(styles.text, { [styles.loading]: loading }, [])}>
+            {children}
+        </div>
+        {loading &&
+            <div className={styles.buttonLoader}>
+                <Loader/>
+            </div>
+        }
     </button>
 }

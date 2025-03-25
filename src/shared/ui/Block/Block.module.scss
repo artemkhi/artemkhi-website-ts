@@ -1,6 +1,69 @@
 .block {
+    display: flex;
+
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-block);
     min-height: 300px;
     padding: calc(var(--border-radius-block) - var(--border-radius-inside));
+}
+
+.column {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
+}
+
+.gap4 {
+    gap: .25rem;
+}
+.gap8 {
+    gap: .5rem;
+}
+.gap16 {
+    gap: 1rem;
+}
+.gap24 {
+    gap: 1.5rem;
+}
+.gap32 {
+    gap: 2rem;
+}
+.gap48 {
+    gap: 3rem;
+}
+.gap60 {
+    gap: 3.75rem;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+.align-center {
+    align-items: center;
+}
+.align-end {
+    align-items: flex-end;
+}
+.align-stretch {
+    align-items: stretch;
 }

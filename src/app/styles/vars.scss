@@ -12,7 +12,9 @@
     // Colors
     --color-text: black;
     --color-background: white;
+    --color-text-semitransparent: #0000001F;
     --color-border: black;
+    --color-shadow: rgba(0, 0, 0, .25);
     --color1: #CC0000;
     --color2: #FFE500;
     --color3: #7B01F9;
@@ -24,7 +26,7 @@
     --color-bot3: #308ADF;
 
     // Border Radius
-    --border-radius-block: 15px;
+    --border-radius-block: 10px;
     --border-radius-inside: 5px;
     --border-radius-circle: 50%;
 
@@ -34,6 +36,7 @@
     --duration-fast: .3125s;
     --duration-normal: .625s;
     --duration-slow: 1.25s;
+    --duration-very-slow: 2.5s;
 
     // Button Gradients
     --gradient-rays: linear-gradient(135deg, #FFF 0% 85%, var(--color1) 85% 90%, var(--color2) 90% 95%, var(--color3) 95% 100%);
