@@ -1,0 +1,11 @@
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+
+    .input {
+        padding: .25rem .5rem;
+        border: 1px solid var(--color-border);
+        box-shadow: none;
+    }
+}

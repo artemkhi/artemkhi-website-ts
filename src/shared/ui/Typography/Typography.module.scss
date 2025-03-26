@@ -1,0 +1,16 @@
+.typography {
+    &.normal {
+        font-weight: normal !important;
+    }
+    &.italic {
+        font-weight: normal !important;
+        font-style: italic !important;
+    }
+    &.bold {
+        font-weight: bold !important;
+    }
+    &.bold-italic {
+        font-weight: bold !important;
+        font-style: italic !important;
+    }
+}

@@ -32,10 +32,7 @@ $activeScale: .95;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &:disabled {
-        opacity: .5;
-    }
+    pointer-events: all;
 
     &:not(:disabled):hover {
         scale: $hoverScale;
@@ -91,5 +88,13 @@ $activeScale: .95;
         scale: 1;
         position: absolute;
         z-index: 2;
+    }
+
+    &:disabled {
+        border-color: var(--color-text-semitransparent) !important;
+
+        .text {
+            color: var(--color-text-semitransparent) !important;
+        }
     }
 }

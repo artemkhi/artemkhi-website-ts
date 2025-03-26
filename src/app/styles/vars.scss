@@ -8,11 +8,12 @@
     --font-size-32: 2rem;
     --font-size-48: 3rem;
     --font-size-64: 4rem;
+    --font-size-72: 4.5rem;
 
     // Colors
     --color-text: black;
     --color-background: white;
-    --color-text-semitransparent: #0000001F;
+    --color-text-semitransparent: rgba(0, 0, 0, .25);
     --color-border: black;
     --color-shadow: rgba(0, 0, 0, .25);
     --color1: #CC0000;

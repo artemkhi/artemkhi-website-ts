@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 import styles from './Main.module.scss';
 
-interface props {
+interface mainProps {
     children: ReactNode;
 }
 
-export default function Main({ children }: props) {
+export default function Main({ children }: mainProps) {
     return <main className={styles.main}>
         {children}
     </main>
