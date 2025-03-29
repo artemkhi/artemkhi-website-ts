@@ -1,10 +1,9 @@
 import Button from './Button/Button';
 import Stack from './Stack/Stack';
-import Block from './Block/Block';
 import Main from './Main/Main';
 import Typography from './Typography/Typography';
 import Loader from './Loader/Loader';
 import Input from './Input/Input';
 import Textarea from './Textarea/Textarea';
 
-export { Main, Stack, Block, Button, Loader, Typography, Input, Textarea };
+export { Main, Stack, Button, Loader, Typography, Input, Textarea };

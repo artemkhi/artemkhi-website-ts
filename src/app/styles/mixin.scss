@@ -1,5 +1,22 @@
 @mixin block {
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border);
+    // background-color: var(--color-background);
+    // border: 1px solid var(--color-border);
+
     border-radius: var(--border-radius-block);
+
+    box-shadow: 0px 0px 20px var(--color-shadow), inset 0px 0px 10px var(--color-shadow);
+}
+
+@mixin button {
+    border-radius: var(--border-radius-inside);
+
+    box-shadow: 0px 0px 10px var(--color-shadow), inset 0px 0px 5px var(--color-shadow);
+}
+
+@mixin input {
+    border: none;
+    border-radius: var(--border-radius-inside);
+    box-shadow: inset 0px 0px 7.5px var(--color-shadow);
+    padding: .25rem .5rem;
+    transition-duration: box-shadow var(--duration-blink);
 }

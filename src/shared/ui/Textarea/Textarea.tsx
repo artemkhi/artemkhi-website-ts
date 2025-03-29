@@ -9,11 +9,10 @@ interface textareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     required?: boolean;
     borderColor?: string;
     error?: string | boolean;
-    customStyle?: object;
 }
 
 export default function Textarea(props: textareaProps) {
-    const { className, label, required, borderColor, error, customStyle, ...otherProps } = props;
+    const { className, label, required, borderColor, error, ...otherProps } = props;
 
     const mode = {
         [styles.error]: Boolean(error),
@@ -27,7 +26,7 @@ export default function Textarea(props: textareaProps) {
         {label}
         {label && required && ' *'}
 
-        <textarea className={styles.textarea} style={{ borderColor: !otherProps.value ? borderColor : undefined, ...customStyle }} {...otherProps}/>
+        <textarea className={styles.textarea} style={{ borderColor: !otherProps.value ? borderColor : undefined }} {...otherProps}/>
 
         <Typography tag="span" className={styles.errorMessage}>
             {typeof error === 'string' && error}

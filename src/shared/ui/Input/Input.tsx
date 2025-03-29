@@ -6,19 +6,27 @@ import Typography from '../Typography/Typography';
 interface inputProps extends InputHTMLAttributes<HTMLInputElement> {
     className?: string;
     label?: string,
+    required?: boolean;
+    borderColor?: string;
     error?: string | boolean;
 }
 
 export default function Input(props: inputProps) {
-    const { className, label, value, onChange, error, type, placeholder } = props;
+    const { className, label, required, borderColor, error, ...otherProps } = props;
 
     const mode = {
         [styles.error]: Boolean(error),
     }
 
     return <label className={getStyles(styles.label, {}, [className])}>
-        {label}
-        <input className={getStyles(styles.input, mode, [])} {...{ value, onChange, type, placeholder }}/>
+        {label}{label && required && ' *'}
+
+        <input
+            className={getStyles(styles.input, mode, [])}
+            style={{ boxShadow: !otherProps.value ? `inset 0px 0px 5px ${borderColor}` : undefined }}
+            {...otherProps}
+        />
+
         <Typography className={styles.errorMessage} tag='span'>{typeof error === 'string' && error}</Typography>
     </label>
 }

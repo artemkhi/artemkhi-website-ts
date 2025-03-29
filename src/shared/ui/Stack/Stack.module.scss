@@ -1,3 +1,5 @@
+@import '../../../app/styles/mixin.scss';
+
 .stack {
     display: flex;
 }
@@ -29,6 +31,9 @@
 }
 .gap60 {
     gap: 3.75rem;
+}
+.gapinherit {
+    gap: inherit;
 }
 
 .justify-start {
@@ -68,4 +73,10 @@
 }
 .max {
     width: 100%;
+}
+.block {
+    @include block;
+
+    min-height: 300px;
+    padding: 1rem;
 }

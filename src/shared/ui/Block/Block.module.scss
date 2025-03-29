@@ -1,8 +1,0 @@
-@import '../../../app/styles/mixin.scss';
-
-.block {
-    @include block;
-
-    min-height: 300px;
-    padding: calc(var(--border-radius-block) - var(--border-radius-inside));
-}

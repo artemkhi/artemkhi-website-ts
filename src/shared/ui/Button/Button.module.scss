@@ -36,7 +36,7 @@ $activeScale: .95;
 
     &:not(:disabled):hover {
         scale: $hoverScale;
-        box-shadow: 0px 7.5px 5px -5px var(--color-shadow);
+        // box-shadow: 0px 7.5px 5px -5px var(--color-shadow);
     }
     &:not(:disabled):active {
         scale: $activeScale;
@@ -47,7 +47,12 @@ $activeScale: .95;
         background-color: var(--color-background);
         background-position-y: 10vh;
         background-repeat: no-repeat;
-        border: 1px solid var(--color-border);
+
+        // border: 1px solid var(--color-border);
+
+        border: none;
+        box-shadow: 0px 0px 10px var(--color-shadow), inset 0px 0px 5px var(--color-shadow);
+
         border-radius: var(--border-radius-inside);
         text-transform: uppercase;
 
@@ -91,7 +96,9 @@ $activeScale: .95;
     }
 
     &:disabled {
-        border-color: var(--color-text-semitransparent) !important;
+        // border-color: var(--color-text-semitransparent) !important;
+        border: inside 1px solid var(--color-shadow);
+        box-shadow: none;
 
         .text {
             color: var(--color-text-semitransparent) !important;
